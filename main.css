@@ -1,10 +1,17 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 h1{
     font-family: 'Lato', sans-serif;
-    color: #fcfcfc;
+    color: #fdf2e8;
     text-decoration: none;
     font-size: 34px;
     font-weight: 400;
@@ -15,7 +22,7 @@ h1{
 
 h3{
     font-family: 'Open Sans', sans-serif;
-    color: #fcfcfc;
+    color: #fdf2e8;
     text-decoration: none;
     font-size: 13px;
     font-style: italic;
@@ -26,28 +33,30 @@ h3{
 
 p{
     font-family: 'Open Sans', sans-serif;
-    color: #fcfcfc;
+    color: #fdf2e8;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
 
 }
-.header {
-    background-color: #778D7B;
+header {
+    background-color: #47aba4;
     padding: 20px;
     float: left;
     height: 166px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 #countdown {
     margin-top: 25px;
 }
 
-button {
-    background-color: #fcfcfc75;
+.menubtn {
+    background-color: #f5a54b;
+    opacity: 0.8;
     border: none;
-    color: #454545;
-    padding: 15px 32px;
+    color: #fdf2e8;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -58,43 +67,35 @@ button {
     margin-left: 65px;
     margin-top: 40px;
     width: 220px;
+    height: 80px;
 }
 
-.information {
-    background: url("images/kirke.jpg");
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    padding: 20px;
+/* Hover effect */
+button:hover {
+    opacity: 0.7;
+}
+
+.img {
+   width: 100%; 
+   height: 166px;
+}
+
+.menubox {
     float: left;
     height: 166px;
 }
 
-.program {
-    background: url("images/program.gif");
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    padding: 20px;
-    float: left;
-    height: 166px;
-}
+.footer{
+    background: #778D7B;
+    text-align: center;
+    clear: left;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    padding: 16px;
+    color: #fcfcfc;
+    height: 83;
 
-.kontakt {
-    background: url("images/kontakt.jpg");
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    padding: 20px;
-    float: left;
-    height: 166px;
-}
-
-footer{
-    background-color: #778D7B;
 
 }
 
