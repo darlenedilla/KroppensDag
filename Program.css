@@ -1,0 +1,58 @@
+/* PROGRAM SIDEN */
+
+.overskriftprogram {
+   color: #FDF2E8;
+   padding: 40px;
+   text-align: center;
+   font-family: 'Lato', sans-serif;
+   font-size: 16pt;
+   font-weight: 400;
+}
+
+
+/* Styling af skemaet */ 
+
+.accordion {
+    background-color: #48ABA4;  /* baggrundfarve */
+    color: #FDF2E8;             /* tekstfarve */ 
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    text-align: left;
+    outline: none;
+    font-size: 15pt;  /* Fontsize til tid og overskrifter */
+    transition: 0.4s;
+    float: left;
+    margin-left: 2.5%;
+    font-family: 'Lato', sans-serif;   /* Font til tid og overskrifter */
+}
+
+
+/* Plustegnene */
+
+.accordion:after {
+    content: '\002B';  /* Unicode character til "plus" tegn */
+    color: #FDF2E8;  
+    font-weight: bold;  
+    float: right;
+}
+
+
+/* Minustegnene */
+
+.active:after {
+    content: "\2212";  /* Unicode character til "minus" tegn */
+}
+
+
+/* Beskrivelse af programmerne */
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    color: #FDF2E8;
+}

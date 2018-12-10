@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<link rel="stylesheet" type="text/css" media="screen" href="Program.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400" rel="stylesheet">
+    
+</head>
+<body>
+
+
+<div class="overskriftprogram"><h2>PROGRAM</h2></div>
+<button class="accordion">Kl. 10.00 Åbning og velkomst</button>
+<div class="panel">
+  <p>Åbning og velkomst v./ Studenterpræst Kirstine Hansen</p>
+</div>
+
+<button class="accordion">Kl. 10.15 Foredag/oplæg</button>
+<div class="panel">
+  <p>Foredrag/oplæg ved Søren Østergaard Center for Ungdomsforsikring</p>
+</div>
+
+<button class="accordion">Kl. 11.00 Debatpanel</button>
+<div class="panel">
+  <p>Debatpanel med Søren Østergaard, Sofie Warberg Hækkerup (ung kvinde der skrev om kropforskrækkelse i Politiken i nov. 2016) og (Mikkel Salling Holmgaard fra Strongmind) en studerende og underviser fra UCL</p>
+</div>
+
+<button class="accordion">Kl. 12.00 Bevægelse</button>
+<div class="panel">
+  <p>Bevægelse i kroppen, dagens sang med Janne Wind</p>
+</div>
+
+<button class="accordion">Kl. 12.10 Smagsprøver</button>
+<div class="panel">
+  <p>Smagsprøver ved studerende fra Kold Collage</p>
+</div>
+    
+<button class="accordion">Kl. 12.30 Sang og undervisning</button>
+<div class="panel">
+  <p>Sang og undervisning om stemmer v. Janne Wind</p>
+</div>  
+    
+<button class="accordion">Kl. 13.00 Oplæg</button>
+<div class="panel">
+  <p>Oplæg om kroppen: kost, bevægelse, hvad sker der i kroppen</p>
+</div>
+    
+<button class="accordion">Kl. 14.30 Pause og besøg</button>
+<div class="panel">
+  <p>Pause og "besøg" i stationerne i kirkerummet ("Tanker til tørre", "Filosofiske smuglere og andet godtfolk", "Fotokunst", "Chili out i Krypten", "Store tanker i små sko" og "Mad med glæde")</p>
+</div>
+    
+<button class="accordion">Kl. 15.15 Danseforestilling</button>
+<div class="panel">
+  <p>Danseforestilling (ved dansere fra Odense)</p>
+</div>
+    
+<button class="accordion">Kl. 16.00 Sangworkshop</button>
+<div class="panel">
+  <p>Sangworkshop v./ Janne Wind</p>
+</div>
+    
+<button class="accordion">Kl. 16.30 Glædeskoncert</button>
+<div class="panel">
+  <p>Glædes koncert med de sange vi lært på 30 min.</p>
+</div>
+    
+<button class="accordion">Kl. 17.00 Afslutning</button>
+<div class="panel">
+  <p>Afslutning og tak for timer sammen</p>
+</div>    
+
+    
+ 
+    
+<script>
+// ANIMERET SLIDE DOWN 
+    
+    
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+    
+</body>
+</html>
