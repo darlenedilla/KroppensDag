@@ -115,6 +115,46 @@ button:hover {
 
 }
 
+
+
+
+
+
+
+/*************KONTAKT****************/
+
+#contactTable{
+    border-collapse: seperate;
+    border-spacing: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    color: #FDF2E8;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.smallBox{
+    width: 75px;
+}
+
+.largeBox{
+    width: 260px;
+}
+
+.smallBox, .largeBox{
+    background-color: #47ABA4;
+    text-align: center;
+    height: 60px;
+}
+
+
+
+
+
 /* Responsive layout */
 @media screen and (max-width: 800px) {
     .header, .information, .program, .kontakt {
