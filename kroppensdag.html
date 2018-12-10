@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <script src="main.js"></script>
 
@@ -19,35 +20,38 @@
 
     <div class="wrapper">
         <div class="contentwrapper">
-            <div class="header">
-                <h1>Kroppens dag</h1>
-                <h3>En hyldest til mangfoldighed</h3>
-                <p id="countdown"></p>
-            </div>
+            <header>
+                    <h1>Kroppens dag</h1>
+                    <h3>En hyldest til mangfoldighed</h3>
+                    <p id="countdown"></p>
+            </header>
         </div>
 
         <div class="contentwrapper">
-            <div class="information">
-                <button type="button" onclick="alert('Hello world!')">INFORMATION</button>
-            </div>
+            <section class="menubox">
+                <img class="img" src="images/kirke.jpg" alt="kirke">
+                <button class="menubtn" type="button">HVEM, HVAD, HVOR</button>
+            </section>
         </div>
 
         <div class="contentwrapper">
-            <div class="program">
-                <button type="button" onclick="alert('Hello world!')">PROGRAM</button>
-            </div>
+            <section class="menubox">
+                <img class="img" src="images/program.gif" alt="program">
+                <button class="menubtn" type="button">PROGRAM</button>
+            </section>
         </div>
 
         <div class="contentwrapper">
-            <div class="kontakt">
-                <button type="button" onclick="alert('Hello world!')">KONTAKT</button>
-            </div>
+            <section class="menubox">
+                <img class="img" src="images/kontakt.jpg" alt="kontakt">
+                <button class="menubtn" type="button">KONTAKT</button>
+            </section>
         </div>
 
     
 
-    <footer>
-        <p>Her skal der være social media</p>
+    <footer class="footer">
+        <i class="fab fa-facebook-f"></i>
         <p>#kroppensdag</p>
     </footer>
     </div>
