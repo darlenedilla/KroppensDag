@@ -1,0 +1,109 @@
+body {
+  background-color: #47aba4;
+
+}
+
+/**************** BUTTON SLUT ****************/
+#myBtn {
+    background-color: #f5a54b;
+    opacity: 0.8;
+    border: none;
+    color: #fdf2e8;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20pt;
+    font-family: 'Lato', sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+button:hover {
+    opacity: 0.7;
+}
+/**************** BUTTON SLUT ****************/
+
+
+/**************** LIGHTBOX ****************/
+/* lightbox (background) */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0,0.8); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Hvem Hvad Hvor Content */
+.hvhvhv {
+    position: fixed;
+    top : 25%;
+    width: 340px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* The Close Button */
+.close {
+    color: #fdf2e8;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+
+.hvhvhvtext{
+  color: #fdf2e8;
+}
+
+.texth2{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 40pt;
+  text-align: center;
+}
+
+.textp{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20pt;
+  text-align: left;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+/**************** LIGHTBOX SLUT ****************/
