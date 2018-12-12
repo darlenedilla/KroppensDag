@@ -1,29 +1,21 @@
 /*********COUNTDOWN*********/ 
 var interval;
-var days;
-var hours;
-var minutes;
-var seconds;
-var now;
-var distance;
-var countDownDate;
-
 
 function countDown(){
     // Set the date we're counting down to
-    countDownDate = new Date("Apr 5, 2019 10:00:00").getTime();
+    var countDownDate = new Date("Apr 5, 2019 10:00:00").getTime();
 
         // Get todays date and time
-        now = new Date().getTime();
+        var now = new Date().getTime();
         
         // Find the distance between now and the count down date
-        distance = countDownDate - now;
+        var distance = countDownDate - now;
         
         // Time calculations for days, hours, minutes and seconds
-        days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
         // Output the result in the elements with id's days, hours, minutes and seconds
          // Output the result in an element with id="demo"
