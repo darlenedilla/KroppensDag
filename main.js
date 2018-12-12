@@ -68,7 +68,6 @@ toggleCountDown();
     
     
 var acc = document.getElementsByClassName("accordion");
-var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -91,7 +90,7 @@ var lightbox2 = document.getElementById('lightbox2');
 var lightbox3 = document.getElementById('lightbox3');
 var lightbox = document.getElementsByClassName('lightbox');
 var menubtn = document.getElementsByClassName("menubtn");
-var span = document.getElementsByClassName("close");
+var closeBtn = document.getElementsByClassName("close");
 
 // When click, open the modal
 
@@ -118,9 +117,8 @@ var span = document.getElementsByClassName("close");
         }
     };
 
-
-    for(i = 0; i < span.length; i++){
-        span[i].onclick = function() {
+    for(i = 0; i < closeBtn.length; i++){
+        closeBtn[i].onclick = function() {
             lightbox1.style.display = "none";
             lightbox2.style.display = "none";
             lightbox3.style.display = "none";

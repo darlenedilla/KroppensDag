@@ -33,7 +33,6 @@
                 <li class="menuItem"><a onclick="scrollto('colors');">Farver</a></li>
                 <li class="menuItem"><a onclick="scrollto('typography');" >Typografi</a></li>
                 <li class="menuItem"><a onclick="scrollto('buttons');" >Knapper og Links</a></li>
-                <li class="menuItem"><a onclick="scrollto('forms');" >Formular</a></li>
                 <li class="menuItem"><a onclick="scrollto('images');" >Billeder/Overlay</a></li>
             </ul>
     </nav>
@@ -43,21 +42,21 @@
             <h2 class="categoryHeading">Farver med farvekode</h2>
             <ul id="colorList">
                 <li class="colorItem"><div class="colorCode" id="blue"></div>
-                    <span class="colorName">Verdigris</span>
+                    <span class="colorName">Verdigris</span><br>
                     <span class="colorName">Hex: #47ABA4</span>
                 </li>
 
                 <li class="colorItem"><div class="colorCode" id="orange"></div>
-                    <span class="colorName">Neon Carrot</span>
+                    <span class="colorName">Neon Carrot</span><br>
                     <span class="colorName">Hex: #F5A54B</span>
                 </li>
 
                 <li class="colorItem"><div class="colorCode" id="white"></div>
-                    <span class="colorName">Old Lace</span>
+                    <span class="colorName">Old Lace</span><br>
                     <span class="colorName">Hex: #FDF2E8</span></li>
 
                 <li class="colorItem"><div class="colorCode" id="black"></div>
-                    <span class="colorName">Outer Space</span>
+                    <span class="colorName">Outer Space</span><br>
                     <span class="colorName">Hex: #454545</span>
                 </li>
             </ul>
@@ -128,7 +127,7 @@
                           <br><br>
                           <span><strong>CSS:</strong></span>
                           <span><code>h3 {<br>
-                            font-family:'Opens Sans', sans-serif;<br>
+                            font-family:'Open Sans', sans-serif;<br>
                             font-weight: 300;<br>
                             font-size: 10pt;<br>
                             color: #FDF2E8;<br>
@@ -169,13 +168,13 @@
         </div>
     </div>
 
-    <div class="container"><!--Container til knapper-->
+    <div class="container buttonC"><!--Container til knapper-->
         <div id="buttons">
             <h2 class="categoryHeading">Knapper og links</h2>
                     <div class="row"><!--ROW 1-->
                             <div class="column">
                                 <div class="buttonDiv">
-                                    <button type="submit" class="largeBtn submit">Fortsæt <i class="fa fa-chevron-right"></i></button>
+                                    <button id="hvhvhvBtn" class="menubtn" type="button">MENUKNAP</button>
                                 </div>
                             </div>
 
@@ -183,20 +182,24 @@
                                 <div class="buttonCode">
                                     <div class="codeSnippet codeBox">
                                         <span><strong>HTML:</strong></span>
-                                        <span><code>&lt;button type="submit" class="largeBtn submit"&gt;Fortsæt &lt;i class="fa fa-chevron-right"&gt&lt;/i&gt&lt;/button&gt</code></span>
+                                        <span><code>&lt;button type="button" class="menubtn"&gt;MENUKNAP&lt;/button&gt</code></span>
                                         <br><br>
                                         <span><strong>CSS:</strong></span>
-                                        <span><code>.largeBtn{<br>
-                                                        height: 40px;<br>
-                                                        width: 100%;<br>
-                                                        border-radius: 5px;<br>
-                                                        background-color: #5FA8D3;<br>
-                                                        font-family: 'Exo 2', sans-serif;<br>
-                                                        font-weight: 700;<br>
-                                                        font-size: 1.2em;<br>
-                                                        color: #FCFCFC;<br>
-                                                        border: none;<br>
-                                                        margin-top: 30px;<br>
+                                        <span><code>
+                                            .menubtn{<br>
+                                                background-color: #f5a54b;<br>
+                                                opacity: 0.8;<br>
+                                                border: none;<br>
+                                                color: #fdf2e8;<br>
+                                                text-align: center;<br>
+                                                text-decoration: none;<br>
+                                                display: block;<br>
+                                                font-size: 20px;<br>
+                                                font-family: 'Lato', sans-serif;<br>
+                                                margin: 4px 2px;<br>
+                                                cursor: pointer;<br>
+                                                width: 220px;<br>
+                                                height: 80px;<br>
                                                     }
                                         </code></span>
                                     </div>
@@ -207,7 +210,10 @@
                     <div class="row"><!--ROW 2-->
                         <div class="column">
                             <div class="buttonDiv">
-                                <a href="404.html" class="gridButton">Læs mere &#8250;</a>
+                                <button class="accordion">PROGRAMKNAP</button>
+                                <div class="panel">
+                                    <p>Eksempel på tekst, når man trykker på programmet.</p>
+                                </div>
                             </div>
                         </div>
 
@@ -215,23 +221,59 @@
                             <div class="buttonCode">
                                 <div class="codeSnippet codeBox">
                                     <span><strong>HTML:</strong></span>
-                                    <span><code>&lt;a href="404.html" class="gridButton"&gt;Læs mere &#8250;&lt;/a&gt;</code></span>
+                                    <span><code>&lt;button class="accordion"&gt;PROGRAMKNAP&lt;/button&gt</code></span>
                                     <br><br>
                                     <span><strong>CSS:</strong></span>
-                                    <span><code>.gridButton {<br>
-                                            position:absolute;<br>
-                                            left:25%;<br>
-                                            margin-top:50px;<br>
-                                            width:50%;<br>
-                                            border-radius: 5px;<br>
-                                            background-color: #5FA8D3;<br>
-                                            font-family: 'Exo 2', sans-serif;<br>
-                                            font-weight: 700;<br>
-                                            font-size: 1.2em;<br>
-                                            color: #FCFCFC;<br>
+                                    <span><code>.accordion{<br>
+                                            background-color: #48ABA4;<br>
+                                            color: #FDF2E8;<br>      
+                                            cursor: pointer;<br>
+                                            padding: 18px;<br>
+                                            width: 340px;<br>
+                                            text-align: left;<br>
+                                            outline: none;<br>
+                                            font-size: 15pt;<br> 
+                                            transition: 0.4s;<br>
+                                            font-family: 'Lato', sans-serif;<br> 
                                             border: none;<br>
-                                            padding:10px;<br>
-                                          }
+                                            }<br><br>
+
+                                            .accordion:after {<br>
+                                                content: '\002B'; <br>
+                                                color: #FDF2E8;  <br>
+                                                font-weight: bold;  <br>
+                                                float: right;<br>
+                                            }<br><br>
+                                            .active:after {<br>
+                                                content: "\2212";br>
+                                            }<br><br>
+                                            .panel {<br>
+                                                padding: 0px 5px px;<br>
+                                                 max-height: 0;<br>
+                                                 overflow: hidden;<br>
+                                                 transition: max-height 0.2s ease-out;<br>
+                                                 font-family: 'Open Sans', sans-serif;<br>
+                                                 font-size: 11pt;<br>
+                                                 color: #FDF2E8;<br>
+                                             }
+                                    </code></span>
+                                    <br><br>
+                                    <span><strong>JS:</strong></span>
+                                    <span><code><br>
+                                        var acc = document.getElementsByClassName("accordion");<br>
+
+                                        for (i = 0; i &lt; acc.length; i++) {<br>
+                                            acc[i].addEventListener("click", function() {<br>
+                                                this.classList.toggle("active");<br>
+                                                var panel = this.nextElementSibling;<br>
+                                                if (panel.style.maxHeight){<br>
+                                                panel.style.maxHeight = null;<br>
+                                                }<br>
+                                                else {<br>
+                                                panel.style.maxHeight = panel.scrollHeight + "px";<br>
+                                                }<br> 
+                                            });<br>
+                                        };
                                     </code></span>
                                 </div>
                             </div>
@@ -240,9 +282,9 @@
 
                 <div class="row"><!--ROW 3-->
                     <div class="column">
-                      <div id="CTAWrapper">
+                      <div id="btnWrapper">
                         <div class="buttonDiv">
-                            <a href="oprettelse.html" class="gridCTA">Tilmeld</a>
+                            <span class="close">&times;</span>
                         </div></div>
                     </div>
 
@@ -250,22 +292,32 @@
                         <div class="buttonCode">
                             <div class="codeSnippet codeBox">
                                 <span><strong>HTML:</strong></span>
-                                <span><code>&lt;a href="oprettelse.html" class="gridCTA">Tilmeld&lt;/a&gt;</code></span>
+                                <span><code>&lt;span class="close"&gt;&times;&lt;/span&gt;</code></span>
                                 <br><br>
                                 <span><strong>CSS:</strong></span>
-                                <span><code>.gridCTA {<br>
-                                        width:120px;<br>
-                                        height:120px;<br>
-                                        padding-top:45px;<br>
-                                        border-radius: 50%;<br>
-                                        background-color: #ffca3a;<br>
-                                        font-family: 'Exo 2', sans-serif;<br>
-                                        font-weight: 700;<br>
-                                        font-size: 1.2em;<br>
-                                        text-decoration:none;<br>
-                                        color: #0d1b1e;<br>
-                                        box-shadow:5px 5px 10px rgba(0, 0, 0, .2);<br>
-                                      }
+                                <span><code>.close {<br>
+                                    color: #fdf2e8;<br>
+                                    float: right;<br>
+                                    font-size: 100px;<br>
+                                    font-weight: bold;<br>
+                                    padding: 25px;<br>
+                                    position: absolute;<br>
+                                    top: 300px;<br>
+                                    left: 150px;<br>
+                                }
+                                </code></span>
+                                <br><br>
+                                <span><strong>JS:</strong></span>
+                                <span><code><br>
+                                    var closeBtn = document.getElementsByClassName("close");<br>
+
+                                    for(i = 0; i &lt; closeBtn.length; i++){<br>
+                                        closeBtn[i].onclick = function() {<br>
+                                            lightbox1.style.display = "none";<br>
+                                            lightbox2.style.display = "none";<br>
+                                            lightbox3.style.display = "none";<br>
+                                        }<br>
+                                    }
                                 </code></span>
                             </div>
                         </div>
@@ -274,246 +326,29 @@
         </div>
     </div><!--Container til knapper og links-->
 
-    <div class="container">
-        <div id="forms">
-            <h2 class="CategoryHeading">Formularer</h2>
-            <div class="formBox">
-            <form id="signUpForm" action="faktura.html" method="GET">
-                    <input class="inputBox medium" type="text" name="firstname" placeholder="Fornavn" required>
-                    <input class="inputBox medium" type="text" name="lastname" placeholder="Efternavn" required>
-                    <input class="inputBox large" type="text" name="address" placeholder="Adresse" required>
-                        <select class="dropdown small" name="postnr" required>
-                            <option>Post Nr.</option>
-                            <option value="5550">5550 Langeskov</option>
-                        </select>
-                    <input class="inputBox large" type="email" name="email" placeholder="E-mail" required>
-                    <input class="inputBox small" type="phone" name="phone" placeholder="Tlf. Nr." required>
 
-                    <label for="dropdown" id="dropdownHeading">I hustanden er der:</label>
-                    <br>
-                    <select name="Voksne" class="dropdown medium" required>
-                        <option selected value="0">0 voksne</option>
-                        <option value="1">1 voksen</option>
-                        <option value="2">2 voksne</option>
-                        <option value="3">3 voksne</option>
-                        <option value="4">4 voksne</option>
-                        <option value="5">5 voksne</option>
-                        <option value="6">6 voksne</option>
-                        <option value="7">7 voksne</option>
-                        <option value="8">8 voksne</option>
-                        <option value="9">9 voksne</option>
-                        <option value="10">10 voksne</option>
-                    </select>
-                    <select name="Børn" class="dropdown medium"required>
-                        <option selected value="0">0 børn</option>
-                        <option value="1">1 barn</option>
-                        <option value="2">2 børn</option>
-                        <option value="3">3 børn</option>
-                        <option value="4">4 børn</option>
-                        <option value="5">5 børn</option>
-                        <option value="6">6 børn</option>
-                        <option value="7">7 børn</option>
-                        <option value="8">8 børn</option>
-                        <option value="9">9 børn</option>
-                        <option value="10">10 børn</option>
-                    </select>
-                    <div class="checkBox"><input type="checkbox"><span> Tilmeld nyhedsbrev.</span></div>
-                        <div class="checkBox"><input type="checkbox" required><span> Jeg har læst og accepterer betingelserne for medlemskab og betaling.</span></div>
-                    <button type="submit" class="largeBtn submit">Fortsæt <i class="fa fa-chevron-right"></i></button>
-                </form>
-        </div></div>
-
-        <div>
-            <div class="formularCode">
-                <div class="codeSnippet codeBox" id="formularKode">
-                    <span><strong>HTML:</strong></span>
-                    <span><code> <!-- HERE STARTS FORM DUMMY CODE -->
-
-                      &lt;form id="signUpForm" action="faktura.html" method="GET"&gt;<br>
-                  &lt;input class="inputBox medium" type="text" name="firstname" placeholder="Fornavn" required&gt;<br>
-                  &lt;input class="inputBox medium" type="text" name="lastname" placeholder="Efternavn" required&gt;<br>
-                  &lt;input class="inputBox large" type="text" name="address" placeholder="Adresse" required&gt;<br>
-                      &lt;select class="dropdown small" name="postnr" required&gt;<br>
-                          &lt;option&gt;Post Nr.&lt;/option&gt;<br>
-                          &lt;option value="5550"&gt;5550 Langeskov&lt;/option&gt;<br>
-                      &lt;/select&gt;<br>
-                  &lt;input class="inputBox large" type="email" name="email" placeholder="E-mail" required&gt;<br>
-                  &lt;input class="inputBox small" type="phone" name="phone" placeholder="Tlf. Nr." required&gt;<br>
-
-                  &lt;label for="dropdown" id="dropdownHeading"&gt;I hustanden er der:&lt;/label&gt;<br>
-                  &lt;br&gt;<br>
-                  &lt;select name="Voksne" class="dropdown medium" required&gt;<br>
-                      &lt;option selected value="0"&gt;0 voksne&lt;/option&gt;<br>
-                      &lt;option value="1"&gt;1 voksen&lt;/option&gt;<br>
-                      &lt;option value="2"&gt;2 voksne&lt;/option&gt;<br>
-                      &lt;option value="3"&gt;3 voksne&lt;/option&gt;<br>
-                      &lt;option value="4"&gt;4 voksne&lt;/option&gt;<br>
-                      &lt;option value="5"&gt;5 voksne&lt;/option&gt;<br>
-                      &lt;option value="6"&gt;6 voksne&lt;/option&gt;<br>
-                      &lt;option value="7"&gt;7 voksne&lt;/option&gt;<br>
-                      &lt;option value="8"&gt;8 voksne&lt;/option&gt;<br>
-                      &lt;option value="9"&gt;9 voksne&lt;/option&gt;<br>
-                      &lt;option value="10"&gt;10 voksne&lt;/option&gt;<br>
-                  &lt;/select&gt;<br>
-                  &lt;select name="Børn" class="dropdown medium"required&gt;<br>
-                      &lt;option selected value="0"&gt;0 børn&lt;/option&gt;<br>
-                      &lt;option value="1"&gt;1 barn&lt;/option&gt;<br>
-                      &lt;option value="2"&gt;2 børn&lt;/option&gt;<br>
-                      &lt;option value="3"&gt;3 børn&lt;/option&gt;<br>
-                      &lt;option value="4"&gt;4 børn&lt;/option&gt;<br>
-                      &lt;option value="5"&gt;5 børn&lt;/option&gt;<br>
-                      &lt;option value="6"&gt;6 børn&lt;/option&gt;<br>
-                      &lt;option value="7"&gt;7 børn&lt;/option&gt;<br>
-                      &lt;option value="8"&gt;8 børn&lt;/option&gt;<br>
-                      &lt;option value="9"&gt;9 børn&lt;/option&gt;<br>
-                      &lt;option value="10"&gt;10 børn&lt;/option&gt;<br>
-                  &lt;/select&gt;<br>
-                  &lt;div class="checkBox"&gt;&lt;input type="checkbox"&gt;&lt;span&gt; Tilmeld nyhedsbrev.&lt;/span&gt;&lt;/div&gt;<br>
-                      &lt;div class="checkBox"&gt;&lt;input type="checkbox" required&gt;&lt;span&gt; Jeg har læst og accepterer betingelserne for medlemskab og betaling.&lt;/span&gt;&lt;/div&gt;<br>
-                  &lt;button type="submit" class="largeBtn submit"&gt;Fortsæt &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;&lt;/button&gt;<br>
-              &lt;/form&gt;<br>
-
-                    </code></span> <!-- HERE STOPS FORM DUMMY CODE -->
-                    <br><br>
-                    <span><strong>CSS:</strong></span><br>
-                    <span><code>#signUpForm, #paymentForm{<br>
-                        width: 310px;<br>
-                        position: relative;<br>
-                        top:170px;<br>
-                        left: 50%;<br>
-                        margin-top: -150px;<br>
-                        margin-left: -150px;<br>
-                        margin-bottom:50px;<br>
-                    }<br><br>
-                    #membershipHeading, #paymentHeading, #thankYouHeading{<br>
-                        font-family: 'Exo 2', sans-serif;<br>
-                        font-weight: 700;<br>
-                        font-size: 2em;<br>
-                        color: #0d1b1e;<br>
-                        text-align: center;<br>
-                        margin-top: 20%;<br>
-                    }<br><br>
-                    .submit, .link{<br>
-                        height: 40px;<br>
-                        width: 300px;<br>
-                    }<br><br>
-
-                    .inputBox, .dropdown{<br>
-                      height: 40px;<br>
-                      border-radius: 5px;<br>
-                      background-color: #EFEFEF;<br>
-                      font-family: 'Lato', sans-serif;<br>
-                      font-weight: 400;<br>
-                      font-size: 1em;<br>
-                      color: #0D1B1E;<br>
-                      margin-bottom: 15px;<br>
-                      margin-right: 7px;<br>
-                      padding: 6px;<br>
-                    }<br><br>
-
-                    .medium{<br>
-                      width: 145px;<br>
-                      margin-top: 10px;<br>
-                    }<br><br>
-
-                    .large{<br>
-                      width: 170px;<br>
-                    }<br><br>
-
-                    .small{<br>
-                      width: 120px;<br>
-                    }<br><br>
-
-                    .full{<br>
-                      width: 300px;<br>
-                    }<br><br>
-
-                    #dropdownHeading{<br>
-                      font-weight: 700;<br>
-                    }<br><br>
-
-
-
-                    .fa-chevron-right{<br>
-                      font-size: 1em;<br>
-                      color: #FCFCFC;<br>
-                      margin-left: 10px;<br>
-                      display: inline;<br>
-                    }<br><br>
-
-                    .checkBox {<br>
-                      margin-bottom:10px;<br>
-                    }<br><br>
-
-                    .paymentWrapper{<br>
-                      width: 100%;<br>
-                      display: block;<br>
-                      font-family: 'Lato', sans-serif;<br>
-                      font-weight: 400;<br>
-                      font-size: 1em;<br>
-                      display: block;<br>
-                      width: 300px;<br>
-                      margin: auto;<br>
-                    }<br><br>
-
-                    #paymentIntro{<br>
-                      height: 100px;<br>
-                      width: 300px;<br>
-                      display: block;<br>
-                      margin-top: 15px;<br>
-                    }<br><br>
-
-                    .paymentNo{<br>
-                      width: 100%;<br>
-                      height: 70px;<br>
-                      color: #FFC658;<br>
-                      font-size: 2em;<br>
-                      font-weight: 700;<br>
-                      background-color: #efefef;<br>
-                      text-align: center;<br>
-                      padding-top: 15px;<br>
-                      padding-bottom: 5px;<br>
-                    }<br><br>
-
-                    #paymentBox{<br>
-                      margin-bottom: 20px;<br>
-                    }<br><br>
-
-                    .paymentDesc{<br>
-                      margin: 20px 0px 10px 0px;<br>
-                    }<br><br>
-
-                    .hiddenInput{<br>
-                      visibility: hidden;<br>
-                      display: none;<br>
-                    }<br><br>
-                    </code></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
+    <div class="container imagesC">
       <h2 class="categoryHeading">Billeder/Overlay</h2>
         <div id="images">
           <div class="row"><!--ROW 3-->
               <div class="column">
-                <img src="../img/kræmmermarked.jpg" alt="sample image" class="sampleImg">
+                <img src="../images/kirke.jpg" alt="kirke" class="sampleImg">
               </div>
 
               <div class="column">
                   <div class="buttonCode">
                       <div class="codeSnippet codeBox">
                           <span><strong>HTML:</strong></span>
-                          <span><code>&lt;img src="img/filename.jpg" alt="describe the image" class="grid-imag"&gt;</code></span>
+                          <span><code>&lt;img src="img/filename.jpg" alt="describe the image" class="samleImg"&gt;</code></span>
                           <br><br>
                           <span><strong>CSS:</strong></span>
-                          <span><code>.grid-img {<br>
-                            display:block;<br>
-                            width:100%;<br>
-                            min-height:100%;<br>
-                            border-radius:5px;<br>
-                          }<br><br>
+                          <span><code>.sampleImg {<br>
+                                position:absolute;<br>
+                                width:350px;<br>
+                                left:30%;<br>
+                                margin-top:5%;<br>
+                                height: 166px;<br>
+                              }}<br><br>
                           Note: Billeder skal altid have samme højde og bredde!
                           </code></span>
                       </div>
@@ -523,178 +358,60 @@
 
             <div class="row"><!--ROW 3-->
                 <div class="column">
-                  <section id="gridWrapperNews" class="gridWrapperNewsStyleGuide">
-                    <div class="grid-colum">
-                              <div class="gridBox" onmouseover="gridOverlayedNews1()">
-                              <div class="gridOverlay" id="gridOverlayNews1" onmouseout="gridNoOverlayNews1()">
-                                <h2>Overskrift</h2>
-                                <h3>DATO</h3>
-                                <span id="gridContentNews1" class="grid-content">
-                                  Sample tekst omkring nyheden eller det pågældende event.
-                                  <a href="404.html" class="gridButton gridButtonStyleGuide">Call to Action &#8250;</a>
-                                </span>
-                              <div class="gridOverlayPuller" id="gridOverlayPullerNews1" onclick="gridNoOverlayNews1()"><div class="pullerArrow">&#8250;</div></div>
-                          </div>
-                              <img src="../img/langeskov.jpg" alt="grid img" class="grid-img">
-                            </div></div>
-                          </section>
+                        <div id="lightbox1" class="lightbox">
+                            <h2 class="lightboxHeading">Lightbox</h2>
+                            <div class="lightboxText">
+                                Lightbox indhold indsættes her. 
+                            </div>
+                        </div>
                 </div>
 
                 <div class="column">
-                    <div class="buttonCode overlayCodeBox">
+                    <div class="buttonCode">
                         <div class="codeSnippet codeBox">
-                            <span><strong>HTML:</strong></span><br>
-                            <span><code>&lt;section id="gridWrapperNews"&gt;<br>
-                              &lt;div class="grid-colum"&gt;<br>
-                              &lt;div class="gridBox" onmouseover="gridOverlayedNews1()"&gt;<br>
-                              &lt;div class="gridOverlay" id="gridOverlayNews1" onmouseout="gridNoOverlayNews1()"&gt;<br>
-                                &lt;h2&gt;Overskrift&lt;/h2&gt;<br>
-                                &lt;h3&gt;DATO&lt;/h3&gt;<br>
-                                &lt;span id="gridContentNews1" class="grid-content"&gt;<br>
-                                  Sample tekst omkring nyheden eller det pågældende event.<br>
-                                  &lt;a href="404.html" class="gridButton"&gt;Call to Action &amp;#8250;&lt;/a&gt;<br>
-                                &lt;/span&gt;<br>
-                              &lt;div class="gridOverlayPuller" id="gridOverlayPullerNews1" onclick="gridNoOverlayNews1()"&gt;&lt;div class="pullerArrow"&gt;&amp;#8250;&lt;/div&gt;&lt;/div&gt;<br>
-                          &lt;/div&gt;<br>
-                              &lt;img src="img/langeskov.jpg" alt="grid img" class="grid-img"&gt;<br>
-                            &lt;/div&gt;&lt;/div&gt;<br>
-                          &lt;/section&gt;</code></span>
+                            <span><strong>HTML:</strong></span>
+                            <span><code>&lt;div class="lightbox"&gt;&lt;/div&gt;</code></span>
                             <br><br>
                             <span><strong>CSS:</strong></span>
-                            <span><code>
-                              #gridWrapperNews {<br>
-                                width:45%;<br>
-                                float:left;<br>
-                                text-align:center;<br>
-                              }<br>
-                              <br>
-                              .grid-colum {<br>
-                                position:relative;<br>
-                                display:block;<br>
-                                text-align:center;<br>
-                                max-width:500px;<br>
-                              }<br>
-                              <br>
-                              .gridBox {<br>
-                                margin-bottom:50px;<br>
-                                max-height:500px;<br>
-                                min-height:500px;<br>
-                              }<br>
-                              .grid-img {<br>
-                                display:block;<br>
-                                width:350px;<br>
-                                min-height:100%;<br>
-                                border-radius:5px;<br>
-                              }<br>
-                              <br>
-                              .gridOverlay {<br>
-                                position:absolute;<br>
-                                background-color:#efefef;<br>
-                                width:350px;<br>
-                                height:65px;<br>
-                                font-family:'Exo 2', sans-serif;<br>
-                                transition-duration:0.5s;<br>
-                                border-top-left-radius:5px;<br>
-                                border-top-right-radius:5px;<br>
-                              }<br>
-                              <br>
-                              .gridOverlay h2 {<br>
-                                position:absolute;<br>
-                                font-size:1.2em;<br>
-                                top:0;<br>
-                                width:100%;<br>
-                              }<br>
-                              .gridOverlay h3 {<br>
-                                position:absolute;<br>
-                                width:100%;<br>
-                                top:40px;<br>
-                                font-size:.8em;<br>
-                              }<br>
-                              <br>
-                              .pullerArrow {<br>
-                                position:absolute;<br>
-                                transform:rotate(90deg);<br>
-                                left:48%;<br>
-                                top:-20%;<br>
-                              }<br>
-                              <br>
-                              .gridOverlayPuller {<br>
-                                position:absolute;<br>
-                                display:block;<br>
-                                width:20%;<br>
-                                height:40px;<br>
-                                border-bottom-left-radius:50%;<br>
-                                border-bottom-right-radius:50%;<br>
-                                background-color:#efefef;<br>
-                                left:40%;<br>
-                                top:90%;<br>
-                                font-size:2em;<br>
-                              }<br>
-                              <br>
-                              .grid-content {<br>
-                                position:absolute;<br>
-                                display:block;<br>
-                                opacity:0;<br>
-                                font-size:1.2em;<br>
-                                top:65px;<br>
-                                left:5%;<br>
-                                height:80%;<br>
-                                width:90%;<br>
-                                transition-duration:0.2s;<br>
-                                transition-delay:0.1s;<br>
-                              }<br><br>
-                              .gridButton {<br>
-                                position:absolute;<br>
-                                left:25%;<br>
-                                margin-top:50px;<br>
-                                width:50%;<br>
-                                border-radius: 5px;<br>
-                                background-color: #5FA8D3;<br>
-                                font-family: 'Exo 2', sans-serif;<br>
-                                font-weight: 700;<br>
-                                font-size: 1.2em;<br>
-                                color: #FCFCFC;<br>
-                                border: none;<br>
-                                padding:10px;<br>
-                              }<br>
-                              <br>
-                              .gridButton:hover  {<br>
-                                background-color: #A7CFE7;<br>
-                              }<br>
-                              <br>
-                            </code></span>
-                        </div>
-                    </div>
-
-                    <div class="buttonCode overlayCodeBox2">
-                        <div class="codeSnippet codeBox">
-                            <span><strong>Javascript:</strong></span>
-                            <span><code><br>
-
-                              function gridOverlayedNews1(){<br>
-                                document.getElementById('gridOverlayNews1').style.height="350px";<br>
-                                document.getElementById('gridContentNews1').style.opacity="1";<br>
-                                document.getElementById('gridOverlayNews1').style.borderBottomLeftRadius="0px";<br>
-                                document.getElementById('gridOverlayNews1').style.borderBottomRightRadius="0px";<br>
-                              }<br><br>
-                              function gridNoOverlayNews1(){<br>
-                                document.getElementById('gridOverlayNews1').style.height="65px";<br>
-                                document.getElementById('gridContentNews1').style.opacity="0";<br>
-                                document.getElementById('gridOverlayNews1').style.borderBottomLeftRadius="0px";<br>
-                                document.getElementById('gridOverlayNews1').style.borderBottomRightRadius="0px";<br>
-                              }<br>
-                              <br>
-                            </code></span>
+                            <span><code>.lightbox{<br>
+                                    display: block; <br>
+                                    position: absolute; <br>
+                                    left:30%;<br>
+                                    margin-top:5%;<br>
+                                    z-index: 10; <br>
+                                    width: 340px; <br>
+                                    height: 500px; <br>
+                                    overflow: auto; <br>
+                                    background-color: rgb(0,0,0,0.8); <br>
+                                    background-color: rgba(0,0,0,0.8);<br>
+                                    -webkit-animation-name: fadeIn; <br>
+                                    -webkit-animation-duration: 0.4s;<br>
+                                    animation-name: fadeIn;<br>
+                                    animation-duration: 0.4s;<br>
+                                }
+                                
                         </div>
                     </div>
                 </div>
-        </div><!--Row 3 slut-->
-
-
-
-
+              
+            </div><!--Row 3 slut-->
         </div>
     </div>
 
+    <script>
+         var acc = document.getElementsByClassName("accordion");
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        };
+    </script>
   </body>
 </html>

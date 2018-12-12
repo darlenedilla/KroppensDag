@@ -206,7 +206,6 @@ header {
      font-size: 15pt;  /* Fontsize til tid og overskrifter */
      transition: 0.4s;
      font-family: 'Lato', sans-serif;   /* Font til tid og overskrifter */
-     z-index:20;
      border: none;
  }
 
