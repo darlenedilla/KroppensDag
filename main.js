@@ -67,17 +67,16 @@ toggleCountDown();
 /**************PROGRAM ANIMATION****************/
     
     
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+var acc = document.getElementsByClassName("accordion"); 
+ 
+for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Løb Array igennem. Length = hvor mange elementer der er. Den tager alle loops, istedet for at man skal skrive det hundrede gange.
+  acc[i].addEventListener("click", function() { // Array
+    this.classList.toggle("active"); // hver gang vi klikker, skal den have active og ikke active. Toggle betyder active/ikke active
+    var panel = this.nextElementSibling; // panel er "child" element. I html er "panel" under "accordion" og derfor er det child element. 
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight + "px"; // her beskrives hvordan den skubber teksten ned, alt efter hvor meget der står. 
     } 
   });
 };
