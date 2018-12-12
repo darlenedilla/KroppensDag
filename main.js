@@ -1,29 +1,21 @@
 /*********COUNTDOWN*********/ 
 var interval;
-var days;
-var hours;
-var minutes;
-var seconds;
-var now;
-var distance;
-var countDownDate;
-
 
 function countDown(){
     // Set the date we're counting down to
-    countDownDate = new Date("Apr 5, 2019 10:00:00").getTime();
+    var countDownDate = new Date("Apr 5, 2019 10:00:00").getTime();
 
         // Get todays date and time
-        now = new Date().getTime();
+        var now = new Date().getTime();
         
         // Find the distance between now and the count down date
-        distance = countDownDate - now;
+        var distance = countDownDate - now;
         
         // Time calculations for days, hours, minutes and seconds
-        days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
         // Output the result in the elements with id's days, hours, minutes and seconds
          // Output the result in an element with id="demo"
@@ -67,16 +59,16 @@ toggleCountDown();
 /**************PROGRAM ANIMATION****************/
     
     
-var acc = document.getElementsByClassName("accordion");
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+var acc = document.getElementsByClassName("accordion"); 
+ 
+for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Løb Array igennem. Length = hvor mange elementer der er. Den tager alle loops, istedet for at man skal skrive det hundrede gange.
+  acc[i].addEventListener("click", function() { // Array
+    this.classList.toggle("active"); // hver gang vi klikker, skal den have active og ikke active. Toggle betyder active/ikke active
+    var panel = this.nextElementSibling; // panel er "child" element. I html er "panel" under "accordion" og derfor er det child element. 
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight + "px"; // her beskrives hvordan den skubber teksten ned, alt efter hvor meget der står. 
     } 
   });
 };
