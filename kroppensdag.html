@@ -12,15 +12,32 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-    <script src="main.js"></script>
+    <script src="main.js" defer>
+    </script>
 
 </head>
-<body>
+<body onload="countDown();">
     <header>
         <h1>Kroppens dag</h1>
-        <h3>En hyldest til mangfoldighed</h3>
-        <p id="countdown"></p>
+        <h3 id="subHeading">En hyldest til mangfoldighed</h3>
+        <div id="countdownWrapper">
+            <div class="countdownBox">
+                <p id="days"></p>
+                <p class="smallText">Dage</p>
+            </div>
+            <div class="countdownBox">
+                <p id="hours"></p>
+                <p class="smallText">Timer</p>
+            </div>
+            <div class="countdownBox">
+                <p id="minutes"></p>
+                <p class="smallText">Minutter</p>
+            </div>
+            <div class="countdownBox">
+                <p id="seconds"></p>
+                <p class="smallText">Sekunder</p>
+            </div>
+        </div>
     </header>
 
     <nav class="wrapper">
@@ -28,32 +45,136 @@
         <div class="contentwrapper">
             <section class="menubox">
                 <img class="menuimg" src="images/kirke.jpg" alt="kirke">
-                <button class="menubtn" type="button">HVEM, HVAD, HVOR</button>
+                <button id="hvhvhvBtn" class="menubtn" type="button">HVEM, HVAD, HVOR</button>
             </section>
         </div>
 
         <div class="contentwrapper">
             <section class="menubox">
                 <img class="menuimg" src="images/program.gif" alt="program">
-                <button class="menubtn" type="button">PROGRAM</button>
+                <button id="programBtn" class="menubtn" type="button">PROGRAM</button>
             </section>
         </div>
 
         <div class="contentwrapper">
             <section class="menubox">
                 <img class="menuimg" src="images/kontakt.jpg" alt="kontakt">
-                <button class="menubtn" type="button">KONTAKT</button>
+                <button id="contactBtn" class="menubtn" type="button">KONTAKT</button>
             </section>
         </div>
 
         </nav><!--WRAPPER END-->
 
-    
+        
 
-    <footer class="footer">
-        <i class="fab fa-facebook-f"></i>
-        <p>#kroppensdag</p>
-    </footer>
+        <!-- The Modals -->
+    <div id="lightbox1" class="lightbox"><!--LIGHTBOX 1 START-->
+
+        <!-- Modal content -->
+          <span class="close">&times;</span>
+          <h2 class="lightboxHeading">Hvem Hvad Hvor</h2>
+            <div class="hvhvhvText">
+                <p class="text1">Kroppens Dag er et event, hvor vi snakker om den "perfekte" krop i trygge rammer.</p>
+                <p class="text2">Kom og vær med <b>fredag d. 5. April 2019 kl. 10-17</b> og tag dine smukke venner med,
+                når vi skyder dagen i gang i <b>Odense Domkirke.</b></p>
+            </div>
+    </div><!--LIGHTBOX 1 SLUT-->
+
+    <div id="lightbox2" class="lightbox"><!--LIGHTBOX 2 START-->
+        <span class="close">&times;</span>
+            <h2 class="lightboxHeading">PROGRAM</h2>
+            <div class="accordionWrapper">
+                <button class="accordion">Kl. 10.00 Åbning og velkomst</button>
+                <div class="panel">
+                    <p>Åbning og velkomst v./ Studenterpræst Kirstine Hansen</p>
+                </div>
+
+                <button class="accordion">Kl. 10.15 Foredag/oplæg</button>
+                <div class="panel">
+                    <p>Foredrag/oplæg ved Søren Østergaard Center for Ungdomsforsikring</p>
+                </div>
+
+                <button class="accordion">Kl. 11.00 Debatpanel</button>
+                <div class="panel">
+                    <p>Debatpanel med Søren Østergaard, Sofie Warberg Hækkerup (ung kvinde der skrev om kropforskrækkelse i Politiken i nov. 2016) og (Mikkel Salling Holmgaard fra Strongmind) en studerende og underviser fra UCL</p>
+                </div>
+
+                <button class="accordion">Kl. 12.00 Bevægelse</button>
+                <div class="panel">
+                    <p>Bevægelse i kroppen, dagens sang med Janne Wind</p>
+                </div>
+
+                <button class="accordion">Kl. 12.10 Smagsprøver</button>
+                <div class="panel">
+                    <p>Smagsprøver ved studerende fra Kold Collage</p>
+                </div>
+                    
+                <button class="accordion">Kl. 12.30 Sang og undervisning</button>
+                <div class="panel">
+                    <p>Sang og undervisning om stemmer v. Janne Wind</p>
+                </div>  
+                    
+                <button class="accordion">Kl. 13.00 Oplæg</button>
+                <div class="panel">
+                    <p>Oplæg om kroppen: kost, bevægelse, hvad sker der i kroppen</p>
+                </div>
+                    
+                <button class="accordion">Kl. 14.30 Pause og besøg</button>
+                <div class="panel">
+                    <p>Pause og "besøg" i stationerne i kirkerummet ("Tanker til tørre", "Filosofiske smuglere og andet godtfolk", "Fotokunst", "Chili out i Krypten", "Store tanker i små sko" og "Mad med glæde")</p>
+                </div>
+                    
+                <button class="accordion">Kl. 15.15 Danseforestilling</button>
+                <div class="panel">
+                    <p>Danseforestilling (ved dansere fra Odense)</p>
+                </div>
+                    
+                <button class="accordion">Kl. 16.00 Sangworkshop</button>
+                <div class="panel">
+                    <p>Sangworkshop v./ Janne Wind</p>
+                </div>
+                    
+                <button class="accordion">Kl. 16.30 Glædeskoncert</button>
+                <div class="panel">
+                    <p>Glædes koncert med de sange vi lært på 30 min.</p>
+                </div>
+                    
+                <button class="accordion">Kl. 17.00 Afslutning</button>
+                <div class="panel">
+                    <p>Afslutning og tak for timer sammen</p>
+                </div>
+            </div><!--acordionWrapper END-->
+</div><!--LIGHTBOX 2 SLUT-->
+
+<div id="lightbox3" class="lightbox"><!--LIGHTBOX 3 START-->
+      <span class="close">&times;</span>
+      <h2 class="lightboxHeading">KONTAKT</h2>
+    
+        <section class="contactText">
+            <p>
+                Har du spørgsmål til det vi laver til Kroppens Dag? 
+                Skriv eller giv os et kald!
+            </p>
+        </section>
+
+        <table id="contactTable">
+            <tr>
+                <td class="smallBox">Tlf</td>
+                <td class="largeBox">+45 12 34 56 78</td>
+            </tr>
+            <tr>
+                <td class="smallBox">Email</td>
+                <td class="largeBox">kroppens@dag.dk</td>
+            </tr>
+        </table>
+        <div id="soMe">
+            <div id="imgWrapper">
+                <img src="images/facebook-icon.png" alt="facebook">
+                <img src="images/instagram-icon.png" alt="instagram">
+            </div>
+        </div>
+</div><!--LIGHTBOX 3 SLUT-->
+
 
 
 

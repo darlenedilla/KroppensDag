@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:300');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #FCFCFC;
+    max-width: 100%;
+    max-height:100%;
+}
+
+#headerWrapper{
+    height: 100px;
+    width:100vw;
+    background-color: #47ABA4;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+#mainHeading, a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FDF2E8;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#menu{
+    background-color: #47ABA4;
+    min-width: 20%;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    padding-top:200px;
+}
+
+#menuList li a{
+    display: block;
+    list-style-type: none;
+    padding-left: 30px;
+    margin: auto;
+    text-align: left;
+}
+
+#menuList li:hover{
+    opacity: 0.5;
+}
+
+#menuList .active{
+    opacity: 0.5;
+}
+
+.categoryHeading{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FDF2E8;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.container{
+    left: 20%;
+    width: 77%;
+    min-height:100vh;
+    height: 700px;
+    background-color: #454545;
+    margin-bottom: 10%;
+    margin-left: 20%;
+}
+
+.typographyC{
+    height: 1300px;
+}
+
+
+
+
+/**********FARVER************/
+
+#colors {
+  padding-top:60px;
+}
+
+.colorItem{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 160px;
+    padding: 5px 5px 0px 5px;
+    background-color: #FCFCFC;
+}
+
+#colorList{
+    position: absolute;
+    top:70%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -350px;
+    margin-bottom:100px;
+    text-align: center;
+}
+
+#colorList, .colorItem .colorName{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #0D1B1E;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.colorCode{
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+}
+
+
+#blue{
+    background-color: #47ABA4;
+}
+
+#orange{
+    background-color: #F5A54B;
+}
+
+#white{
+    background-color: #FDF2E8;
+}
+
+#black{
+    background-color: #454545;
+}
+
+
+/************TYPOGRAFI***************/
+
+
+#typographyWrapper{
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+  font-family:'Lato', sans-serif;
+  font-size:30pt;
+  font-weight:400;
+  color: #FDF2E8;
+}
+
+#h1, #h2, #h3, #bodyTekst {
+  margin-top:90px;
+  max-width:270px;
+  color: #FDF2E8;
+}
+
+h2 {
+  font-family:'Lato', sans-serif;
+  font-weight:400;
+  font-size: 25pt;
+  color: #FDF2E8;
+}
+
+h3 {
+  font-family:'Opens Sans', sans-serif;
+  font-weight: 300;
+  font-size: 10pt;
+  color: #FDF2E8;
+}
+
+p {
+    font-family: 'Open Sans', serif-sans;
+    font-weight: 300;
+    font-size: 15pt;
+    color: #FDF2E8;
+}
+
+span{
+    font-family:'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15pt;
+    color: #454545;
+}
+
+
+
+
+/********KNAPPER OG LINKS*************/
+
+
+#buttonWrapper label{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #0D1B1E;
+    height: 100%;
+}
+
+.submit, .link{
+    height: 40px;
+    width: 300px;
+}
+
+.largeBtn{
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  background-color: #5FA8D3;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #FCFCFC;
+  border: none;
+  display: block;
+  margin: auto;
+}
+
+.buttonDiv{
+    height: 100%;
+    position: relative;
+    top: 40%;
+}
+
+.buttonCode{
+    width: 400px;
+    height: 200px;
+    margin:auto;
+    background-color: #DADADA;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+
+.codeSnippet pre{
+    width: 100px;
+}
+
+.codeSnippet code{
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+strong{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.9;
+}
+
+
+.gridButton {
+    margin: auto;
+    border-radius: 5px;
+    background-color: #5FA8D3;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #FCFCFC;
+    border: none;
+    padding:10px;
+    display: block;
+    width:30%;
+    position: relative;
+    left: 1%;
+  }
+
+#CTAWrapper {
+  position:relative;
+  z-index:0;
+  top:-110%;
+  left:10%;
+  bottom:0;
+}
+
+
+/* Form SECTION */
+
+.formBox {
+  margin-top:50px;
+}
+
+#formularKode {
+  width:50vw;
+  height: 600px;
+  margin:auto;
+  background-color: #DADADA;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  overflow:scroll;
+  overflow-x:hidden;
+  margin-top:400px;
+}
+
+#images {
+  margin-top:60px;
+}
+
+.sampleImg {
+  position:absolute;
+  width:350px;
+  height:350px;
+  left:30%;
+  margin-top:20px;
+}
+
+/* OVERLAY */
+
+.gridWrapperNewsStyleGuide {
+  position:relative;
+  left:25%;
+  height:500px;
+  width:500px;
+  margin-top:300px;
+}
+
+.grid-img{
+    height: 350px;
+    width: 350px;
+}
+
+.gridOverlay{
+    width: 350px;
+}
+
+
+.overlayCodeBox {
+  margin-top:300px;
+}
+.overlayCodeBox2 {
+  height:220px;
+  overflow:scroll;
+}
+
+.gridButtonStyleGuide {
+  margin-top:60px;
+  width:50%;
+}
+
+/**********GRID************/
+
+
+.column {
+    float: left;
+    width: 50%;
+    height: 300px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
