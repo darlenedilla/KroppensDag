@@ -41,7 +41,7 @@ body{
     min-width: 20%;
     height: 100%; /* Full height */
     position: fixed; /* Make it stick, even on scroll */
-    padding-top:150px;
+    padding-top:100px;
 }
 
 #menuList li a{
@@ -59,6 +59,15 @@ body{
 #menuList .active{
     opacity: 0.5;
 }
+
+.menuItem{
+    border: 2px solid #FDF2E8;
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+
+
 
 .categoryHeading{
     font-family: 'Lato', sans-serif;
