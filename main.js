@@ -59,10 +59,10 @@ toggleCountDown();
 /**************PROGRAM ANIMATION****************/
     
     
-var acc = document.getElementsByClassName("accordion"); 
+var acc = document.getElementsByClassName("accordion"); // Variablens værdi er alle de klasser som hedder accordion. Den kalder på alle elementerne i html der hedder accordion
  
-for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Løb Array igennem. Length = hvor mange elementer der er. Den tager alle loops, istedet for at man skal skrive det hundrede gange.
-  acc[i].addEventListener("click", function() { // Array
+for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Her løber den hele Arrayet igennem. Length = hvor mange elementer der er. Denne forklarer, at den ligger en til i hvert loop. Dvs den tager automatisk det næste array, istedet for at man skal skrive det hundrede gange. 
+  acc[i].addEventListener("click", function() { // Array (HJÆLP FRA D TIL DENNE)
     this.classList.toggle("active"); // hver gang vi klikker, skal den have active og ikke active. Toggle betyder active/ikke active
     var panel = this.nextElementSibling; // panel er "sibling" element. I html er "panel" lige efter "accordion" og derfor er det sibling element. 
     if (panel.style.maxHeight){
