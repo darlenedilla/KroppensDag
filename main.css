@@ -133,41 +133,53 @@ header {
     animation-duration: 0.4s
 }
 
-/*************Hvem Hvad Hvor Content**************/
+/*************HVEM HVAD HVOR Content**************/
+
+.lightboxHeading{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 25pt;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    width: 100%;
+    color: #FDF2E8;
+}
+
 
 /* The Close Button */
 .close {
-    color: #fdf2e8;
     float: right;
+    color: #fdf2e8;
     font-size: 100px;
     font-weight: bold;
     padding: 25px;
+    position: relative;
+    top: -45;
 }
 
-
-.text1{
-  position: absolute;
-  top: 35%;
-}
-
-.text2{
-  position: absolute;
-  top: 60%;
-}
 
 .text1, .text2{
   font-family: 'Open Sans', sans-serif;
   color: #FDF2E8;
   font-weight: 300;
   font-size: 20pt;
-  text-align: justify;
+  text-align: left;
   width: 340px;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
 
-
+.text1{
+    position: absolute;
+    top: 35%;
+  }
+  
+  .text2{
+    position: absolute;
+    top: 65%;
+  }
 
 .close:hover,
 .close:focus {
@@ -213,7 +225,7 @@ header {
 
  .accordionWrapper{
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -311,13 +323,3 @@ header {
     top: 23%;
 }
 
-.lightboxHeading{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 25pt;
-    position: absolute;
-    top: 15%;
-    text-align: center;
-    width: 100%;
-    color: #FDF2E8;
-}
