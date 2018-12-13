@@ -77,6 +77,7 @@ for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Her løber den he
 
 /**************LIGHTBOX******************/
 
+//Her defineres variablerne til hhv. lightbox elementerne og knapper i html
 var lightbox1 = document.getElementById('lightbox1');
 var lightbox2 = document.getElementById('lightbox2');
 var lightbox3 = document.getElementById('lightbox3');
@@ -85,40 +86,37 @@ var menubtn = document.getElementsByClassName("menubtn");
 var closeBtn = document.getElementsByClassName("close");
 
 // When click, open the modal
-
-    for(i = 0; i < menubtn.length; i++){
-        menubtn[i].onclick = function(clickedBtn) {
-            if(clickedBtn.target == document.getElementById("hvhvhvBtn")){
-                lightbox1.style.display = "block";
-                lightbox2.style.display = "none";
-                lightbox3.style.display = "none";
+    for(i = 0; i < menubtn.length; i++){ // For-loop, der gennemgår array'et med alle menuknapperne
+        menubtn[i].onclick = function(clickedBtn) { // Tilføjer en eventlistener (click) til hver menuknap
+            if(clickedBtn.target == document.getElementById("hvhvhvBtn")){ //Her tjekkes om den knap, der trykkes på har ID 'hvhvhvBtn'
+                lightbox1.style.display = "block"; // Viser lightbox 1
+                lightbox2.style.display = "none"; // Skjuler lightbox 2
+                lightbox3.style.display = "none"; //Skjuler lightbox 3
             }
-            if(clickedBtn.target == document.getElementById("programBtn")){
-                lightbox2.style.display = "block";
-                lightbox1.style.display = "none";
-                lightbox3.style.display = "none";
-                console.log("this the program");
-                console.log(lightbox2.style.getPropertyValue("display"));
+            if(clickedBtn.target == document.getElementById("programBtn")){ //Her tjekkes om den knap, der trykkes på har ID 'programBtn'
+                lightbox2.style.display = "block"; // Viser lightbox 2
+                lightbox1.style.display = "none"; //Skjuler lightbox 1
+                lightbox3.style.display = "none"; //Skjuler lightbox 3
             }
-            if(clickedBtn.target == document.getElementById("contactBtn")){
-                lightbox3.style.display = "block";
-                lightbox1.style.display = "none";
-                lightbox2.style.display = "none";
-                console.log("this the contact");
+            if(clickedBtn.target == document.getElementById("contactBtn")){ //Her tjekkes om den knap, der trykkes på har ID 'contactBtn'
+                lightbox3.style.display = "block"; // Viser lightbox 3
+                lightbox1.style.display = "none"; // Skjuler lightbox 1
+                lightbox2.style.display = "none"; // Viser lightbox 2
             }
         }
     };
 
-    for(i = 0; i < closeBtn.length; i++){
-        closeBtn[i].onclick = function() {
+    for(i = 0; i < closeBtn.length; i++){ // For-loop, der gennemgår array'et med X-knapperne i lightboxen
+        closeBtn[i].onclick = function() { // Tilføjer en eventlistener (click) til hver X-knap
+            //Herunder skjules alle lightboxene
             lightbox1.style.display = "none";
             lightbox2.style.display = "none";
             lightbox3.style.display = "none";
         }
     }
 
-    window.onclick = function(event) {
-        if (event.target == lightbox) {
-            lightbox.style.display = "none";
+    window.onclick = function(event) { // Tilføjer eventlistener (click) til vinduet
+        if (event.target == lightbox) { // Tjekker om det, der clickes på er en lightbox
+            lightbox.style.display = "none"; // Skjuler lightbox
         }
     }
