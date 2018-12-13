@@ -86,7 +86,7 @@ header {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 20px;
+    font-size: 15pt;
     font-family: 'Lato', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
@@ -97,6 +97,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
 
@@ -104,6 +105,7 @@ header {
     position: absolute;
     width: 100%;
     height: 166px;
+    opacity: 0.5;
 }
 
 .menubox {
@@ -112,10 +114,144 @@ header {
 
 
 
+  /**************** LIGHTBOX ****************/
+  /* lightbox (background) */
+  .lightbox, #lightbox1, #lightbox2, #lightbox3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0,0.8); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/*************Hvem Hvad Hvor Content**************/
+
+/* The Close Button */
+.close {
+    color: #fdf2e8;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+
+.text1{
+  position: absolute;
+  top: 35%;
+}
+
+.text2{
+  position: absolute;
+  top: 60%;
+}
+
+.text1, .text2{
+  font-family: 'Open Sans', sans-serif;
+  color: #FDF2E8;
+  font-weight: 300;
+  font-size: 20pt;
+  text-align: justify;
+  width: 340px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: #f5a54b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+/**************** LIGHTBOX SLUT ****************/
 
 
 
 
+/**********STYLING AF PROGRAM***********/
+
+/* PROGRAM SIDEN */
+ 
+ /* Styling af skemaet */ 
+ 
+ .accordion {
+     background-color: #48ABA4;  /* baggrundfarve */
+     color: #FDF2E8;             /* tekstfarve */ 
+     cursor: pointer;
+     padding: 18px;
+     width: 340px;
+     text-align: left;
+     outline: none;
+     font-size: 15pt;  /* Fontsize til tid og overskrifter */
+     transition: 0.4s;
+     font-family: 'Lato', sans-serif;   /* Font til tid og overskrifter */
+     border: none;
+ }
+
+ .accordionWrapper{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin-bottom: 10%;
+ }
+ 
+ 
+ /* Plustegnene */
+ 
+ .accordion:after {
+     content: '\002B';  /* Unicode character til "plus" tegn */
+     color: #FDF2E8;  
+     font-weight: bold;  
+     float: right;
+ }
+ 
+ 
+ /* Minustegnene */
+ 
+ .active:after {
+     content: "\2212";  /* Unicode character til "minus" tegn */
+ }
+ 
+ 
+ /* Beskrivelse af programmerne */
+ 
+ .panel {
+    padding: 0px 5px px;
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.2s ease-out;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 11pt;
+     color: #FDF2E8;
+ }
+
+
+  
 
 /*************KONTAKT****************/
 
@@ -184,160 +320,4 @@ header {
     text-align: center;
     width: 100%;
     color: #FDF2E8;
-}
-
-
-
-
-/**********STYLING AF PROGRAM***********/
-
-/* PROGRAM SIDEN */
- 
- /* Styling af skemaet */ 
- 
- .accordion {
-     background-color: #48ABA4;  /* baggrundfarve */
-     color: #FDF2E8;             /* tekstfarve */ 
-     cursor: pointer;
-     padding: 18px;
-     width: 340px;
-     text-align: left;
-     outline: none;
-     font-size: 15pt;  /* Fontsize til tid og overskrifter */
-     transition: 0.4s;
-     font-family: 'Lato', sans-serif;   /* Font til tid og overskrifter */
-     border: none;
- }
-
- .accordionWrapper{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    margin-bottom: 10%;
- }
- 
- 
- /* Plustegnene */
- 
- .accordion:after {
-     content: '\002B';  /* Unicode character til "plus" tegn */
-     color: #FDF2E8;  
-     font-weight: bold;  
-     float: right;
- }
- 
- 
- /* Minustegnene */
- 
- .active:after {
-     content: "\2212";  /* Unicode character til "minus" tegn */
- }
- 
- 
- /* Beskrivelse af programmerne */
- 
- .panel {
-    padding: 0px 5px px;
-     max-height: 0;
-     overflow: hidden;
-     transition: max-height 0.2s ease-out;
-     font-family: 'Open Sans', sans-serif;
-     font-size: 11pt;
-     color: #FDF2E8;
- }
-
-
-
-
-
-
- 
- 
-  
-  /**************** LIGHTBOX ****************/
-  /* lightbox (background) */
-  .lightbox, #lightbox1, #lightbox2, #lightbox3 {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 10; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0,0.8); /* Fallback color */
-      background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-      -webkit-animation-name: fadeIn; /* Fade in the background */
-      -webkit-animation-duration: 0.4s;
-      animation-name: fadeIn;
-      animation-duration: 0.4s
-  }
-  
-  /* Hvem Hvad Hvor Content */
-  
-  /* The Close Button */
-  .close {
-      color: #fdf2e8;
-      float: right;
-      font-size: 100px;
-      font-weight: bold;
-      padding: 25px;
-  }
-
-  
-  .text1{
-    position: absolute;
-    top: 35%;
-  }
-
-  .text2{
-    position: absolute;
-    top: 60%;
-  }
-
-  .text1, .text2{
-    font-family: 'Open Sans', sans-serif;
-    color: #FDF2E8;
-    font-weight: 300;
-    font-size: 20pt;
-    text-align: justify;
-    width: 340px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-
-
-  
-  .close:hover,
-  .close:focus {
-      color: #f5a54b;
-      text-decoration: none;
-      cursor: pointer;
-  }
-  
-  /* Add Animation */
-  @-webkit-keyframes fadeIn {
-      from {opacity: 0}
-      to {opacity: 1}
-  }
-  
-  @keyframes fadeIn {
-      from {opacity: 0}
-      to {opacity: 1}
-  }
-  /**************** LIGHTBOX SLUT ****************/
-  
-
-
-
-
-
-/* Responsive layout */
-@media screen and (max-width: 800px) {
-    .header, .information, .program, .kontakt {
-        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
 }
