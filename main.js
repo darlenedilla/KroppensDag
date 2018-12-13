@@ -59,16 +59,16 @@ toggleCountDown();
 /**************PROGRAM ANIMATION****************/
     
     
-var acc = document.getElementsByClassName("accordion"); // Variablens værdi er alle de klasser som hedder accordion. Den kalder på alle elementerne i html der hedder accordion
+var acc = document.getElementsByClassName("accordion"); // Der bliver lavet en variabel der hedder acc. Variablens værdi er alle de klasser som hedder accordion. Den kalder på alle elementerne i html der hedder accordion
  
 for (i = 0; i < acc.length; i++) {   // For loop. Array = acc. Her løber den hele Arrayet igennem. Length = hvor mange elementer der er. Denne forklarer, at den ligger en til i hvert loop. Dvs den tager automatisk det næste array, istedet for at man skal skrive det hundrede gange. 
-  acc[i].addEventListener("click", function() { // Array (HJÆLP FRA D TIL DENNE)
+  acc[i].addEventListener("click", function() { // Array. For hvert element i det rray der hedder acc, tilføjes der en eventlistener som hedder klik. Denne eventlistener har en funktion, som kommer fra næste linje.  
     this.classList.toggle("active"); // hver gang vi klikker, skal den have active og ikke active. Toggle betyder active/ikke active
     var panel = this.nextElementSibling; // panel er "sibling" element. I html er "panel" lige efter "accordion" og derfor er det sibling element. 
-    if (panel.style.maxHeight){
+    if (panel.style.maxHeight){ // Her tjekkes om den styling på  panel der hedder hedder 'max-height', har en værdi. Hvis den har en værdi, sætter den den til null. Hvis den ikke har en værdi, gården ud fra hvor meget tekst der står. 
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px"; // her beskrives hvordan den skubber teksten ned, alt efter hvor meget der står. 
+      panel.style.maxHeight = panel.scrollHeight + "px"; 
     } 
   });
 };
